@@ -44,8 +44,14 @@ function Course() {
     setsections(resp.data);
   };
   
-  const getstatus = (usr)=>{
-    const re = axios.get(`http://localhost/getstatus/${user.addr}/${cid}`)
+  const getstatus = async (usr)=>{
+    const re =await axios.get(`http://localhost:7000/getstatus/${usr.addr}/${cid}`)
+
+    if(re.data.iscomplete){
+      console.log("hh")
+      setcertbutton(true)
+     
+    }
   }
 
   const getuser = async (user) => {

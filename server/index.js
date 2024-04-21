@@ -101,6 +101,8 @@ app.get("/course/:id", async (req, res) => {
   }
 });
 
+
+
 app.post("/buy", async (req, res) => {
   try {
     const status = await fcl
@@ -177,12 +179,30 @@ app.get("/cert/:courseid/:userid", async (req, res) => {
     user: req.params.userid,
   });
 
+
+
+
   if(findcert){
       res.status(200).json({stat:"found",cert:findcert})
   }else{
     res.status(404).json({stat:"notfound"})
   }
 });
+
+
+app.get('/getstatus/:userid/:courseid', async (req,res)=>{
+  const finduser=await user.findOne({address:req.params.userid})
+  const findcourse = await course.findById(req.params.courseid)
+  const index = finduser.ownedcourses.findIndex(obj => obj.id == req.params.courseid)
+  const status = finduser.ownedcourses[index].status
+  
+  if(status < findcourse.sections.length  ){
+    res.status(200).json({iscomplete:false,status:status})
+  }else{
+    res.status(200).json({iscomplete:true,status:status})
+  }
+ 
+})
 
 
 app.post("/makecert",async (req,res)=>{
