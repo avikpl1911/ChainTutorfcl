@@ -43,6 +43,10 @@ function Course() {
 
     setsections(resp.data);
   };
+  
+  const getstatus = (usr)=>{
+    const re = axios.get(`http://localhost/getstatus/${user.addr}/${cid}`)
+  }
 
   const getuser = async (user) => {
     const resp = await axios.get(`http://localhost:7000/user/${user.addr}`);
@@ -56,6 +60,7 @@ function Course() {
     if (resp.data.ownedcourses.findIndex((oc) => oc.id == cid) != -1) {
       setisowned(true);
       getsections(user);
+      getstatus(user)
     }
   };
 
