@@ -7,7 +7,7 @@ import { Confg } from './smartcontracts/reactfunccad/Auth'
    
 export default function PrivateRoutes(){
     
-const token = localStorage.getItem("user")
+const token = sessionStorage.getItem("user")
 console.log(token)
 return (
 

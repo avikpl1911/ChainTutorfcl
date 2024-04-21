@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@onflow/fcl": "^1.10.0",
+    "@onflow/sdk": "^1.4.0",
+    "@onflow/transport-grpc": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0",
+    "pdfkit": "^0.15.0"
+  }
+}
