@@ -54,4 +54,4 @@ _Below is an example of how you can instruct your audience on installing and set
    npm run dev
    ```
 
-![Project flow](https://github.com/pottekkat/awesome-readme/raw/master/header.png)
+![Project flow](https://raw.githubusercontent.com/avikpl1911/ChainTutorfcl/refs/heads/main/Screenshot%202025-06-29%20211853.png)
