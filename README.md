@@ -4,7 +4,7 @@
 <a href="https://github.com/ShaanCoding/ReadME-Generator">
 <img src="https://raw.githubusercontent.com/avikpl1911/ChainTutorfcl/fb93df52a972eab269a317803262bde0464c41a4/c5a26d43bc024c87894f5bb9971229a0.png" alt="Logo" width="80" height="80">
 </a>
-<h3 align="center">ChainTutor</h3>
+<h3 align="center">Chain Tutor</h3>
 <p align="center">
 Education platform using Blockchain
 
